@@ -1,4 +1,6 @@
-import { AppSidebar } from "@/components/app-sidebar"
+"use client";
+
+import { AppSidebar } from "@/components/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,15 +8,21 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Separator } from "@/components/ui/separator"
+} from "@/components/ui/breadcrumb";
+import { Separator } from "@/components/ui/separator";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/components/ui/sidebar"
+} from "@/components/ui/sidebar";
+
+import NovelEditor from "@/components/novel-editor"
+
+import { useState } from "react";
 
 export default function Page() {
+  const [content, setContent] = useState<string | undefined>();
+
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -44,9 +52,15 @@ export default function Page() {
             <div className="aspect-video rounded-xl bg-muted/50" />
             <div className="aspect-video rounded-xl bg-muted/50" />
           </div>
-          <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" />
+          <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min">
+          <NovelEditor
+            content={content}
+            setContent={setContent}
+            title="Product Content"
+          />
+          </div>
         </div>
       </SidebarInset>
     </SidebarProvider>
-  )
+  );
 }
