@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
-// import './prosemirror.css'
+import './prosemirror.css'
 import './globals.css'
 
 const geistSans = localFont({
