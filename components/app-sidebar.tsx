@@ -29,74 +29,78 @@ import {
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "Abdenour",
+    email: "akme@leecho.io",
     avatar: "/avatars/shadcn.jpg",
   },
-  teams: [
+  organizations: [
     {
-      name: "Acme Inc",
+      name: "Akme Inc",
       logo: GalleryVerticalEnd,
       plan: "Enterprise",
     },
     {
-      name: "Acme Corp.",
+      name: "KDR Corp.",
       logo: AudioWaveform,
       plan: "Startup",
     },
     {
-      name: "Evil Corp.",
+      name: "Tyf Corp.",
       logo: Command,
-      plan: "Free",
+      plan: "Enterprise",
     },
   ],
   navMain: [
     {
-      title: "Playground",
+      title: "Product Managemente",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
+          title: "Mawl Ai",
           url: "#",
         },
         {
-          title: "Starred",
+          title: "Hakoira",
           url: "#",
         },
         {
-          title: "Settings",
+          title: "Jeeb",
           url: "#",
         },
       ],
     },
     {
-      title: "Models",
+      title: "Product Management",
       url: "#",
       icon: Bot,
       items: [
         {
-          title: "Genesis",
+          title: "Modules",
           url: "#",
         },
         {
-          title: "Explorer",
+          title: "Features",
           url: "#",
         },
         {
-          title: "Quantum",
+          title: "Feedbacks",
+          url: "#",
+        },
+        {
+          title: "Feature Requests",
           url: "#",
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "Plan",
       url: "#",
       icon: BookOpen,
       items: [
         {
-          title: "Introduction",
+          title: "Products",
           url: "#",
         },
         {
@@ -160,7 +164,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
+        <TeamSwitcher teams={data.organizations} />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />

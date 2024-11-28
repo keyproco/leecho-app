@@ -16,7 +16,6 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 
-import NovelEditor from "@/components/novel-editor"
 
 import { useState } from "react";
 
