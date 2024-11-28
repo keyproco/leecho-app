@@ -1,5 +1,5 @@
 "use client";
-
+import ContentForm from '@/components/content-form'
 import { AppSidebar } from "@/components/app-sidebar";
 import {
   Breadcrumb,
@@ -24,6 +24,7 @@ export default function Page() {
   const [content, setContent] = useState<string | undefined>();
 
   return (
+
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
@@ -53,11 +54,7 @@ export default function Page() {
             <div className="aspect-video rounded-xl bg-muted/50" />
           </div>
           <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min">
-          <NovelEditor
-            content={content}
-            setContent={setContent}
-            title="Product Content"
-          />
+            <ContentForm/> 
           </div>
         </div>
       </SidebarInset>

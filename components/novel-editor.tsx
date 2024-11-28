@@ -1,6 +1,11 @@
-import React from "react";
-import { Editor } from "novel";
+import React, { useRef }from "react";
+
 import { type Editor as TipTapEditor } from "@tiptap/core";
+import Table from "@tiptap/extension-table";
+import TableRow from "@tiptap/extension-table-row";
+import TableCell from "@tiptap/extension-table-cell";
+import TableHeader from "@tiptap/extension-table-header";
+
 
 
 type NovelEditorProps = {
@@ -10,10 +15,12 @@ type NovelEditorProps = {
 };
 
 export default function NovelEditor({ setContent, content, title }: NovelEditorProps) {
+  
   return (
         <div>
             <h2 className="pt-4 pb-3">{title}</h2>
-                <Editor
+                {/* <Editor
+
                 defaultValue={{
                     type: "doc",
                     content: [],
@@ -23,8 +30,11 @@ export default function NovelEditor({ setContent, content, title }: NovelEditorP
                 }}
                 disableLocalStorage={true}
                 className="rounded-md border shadow-none"
-                />
+                extensions={[
+                  ]}
+                /> */}
         </div>
 
   );
 }
+
