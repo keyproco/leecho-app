@@ -50,7 +50,7 @@ export default function ContentForm() {
   return (
     <div className='mt-6 flex max-w-2xl flex-col gap-4'>
       <div className='flex gap-4'>
-        {/* <Input
+        <Input
           type='text'
           placeholder='Title'
           value={title}
@@ -61,13 +61,9 @@ export default function ContentForm() {
           placeholder='Slug'
           value={slug}
           onChange={e => setSlug(e.target.value)}
-        /> */}
+        />
       </div>
-
       <Editor initialValue={defaultValue} onChange={setContent} />
-      {/* <Button onClick={handleSubmit} disabled={pending}>
-        {pending ? 'Submitting...' : 'Create'}
-      </Button> */}
     </div>
   )
 }
