@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import ProductCard from "@/components/product-card";
 export const metadata: Metadata = {
   title: "Leecho | Products",
   description: "Build trust, improve retention, and drive growth by making education a core part of your product strategy.",
@@ -7,9 +7,8 @@ export const metadata: Metadata = {
 
 const Products = () => {
     return (
-      <div>
-        <h1>Product Page </h1>
-        <p>Welcome to the Product Page</p>
+      <div className="">
+        <ProductCard/>
       </div>
     );
   };
