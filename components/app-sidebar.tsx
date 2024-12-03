@@ -26,14 +26,13 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 
-// This is sample data.
 const data = {
   user: {
     name: "Abdenour",
-    email: "akme@leecho.io",
+    email: "me@leecho.io",
     avatar: "/avatars/shadcn.jpg",
   },
-  organizations: [
+  teams: [
     {
       name: "Akme Inc",
       logo: GalleryVerticalEnd,
@@ -47,72 +46,87 @@ const data = {
     {
       name: "Tyf Corp.",
       logo: Command,
-      plan: "Enterprise",
+      plan: "Free",
     },
   ],
   navMain: [
     {
-      title: "Product Managemente",
-      url: "#",
+      title: "Product Hub",
+      url: "/product-hub/",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "Mawl Ai",
-          url: "#",
+          title: "Products",
+          url: "/product-hub/products",
         },
         {
-          title: "Hakoira",
-          url: "#",
+          title: "Product Variants",
+          url: "/product-hub/product-variants",
         },
         {
-          title: "Jeeb",
-          url: "#",
+          title: "Roadmaps",
+          url: "/product-hub/roadmaps",
         },
       ],
     },
     {
-      title: "Product Management",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Modules",
-          url: "#",
-        },
-        {
-          title: "Features",
-          url: "#",
-        },
-        {
-          title: "Feedbacks",
-          url: "#",
-        },
-        {
-          title: "Feature Requests",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Plan",
-      url: "#",
+      title: "Academy Hub",
+      url: "/academy-hub/",
       icon: BookOpen,
       items: [
         {
-          title: "Products",
-          url: "#",
+          title: "Courses",
+          url: "/academy-hub/courses",
         },
         {
-          title: "Get Started",
-          url: "#",
+          title: "Certification Paths",
+          url: "/academy-hub/certification-paths",
         },
         {
-          title: "Tutorials",
-          url: "#",
+          title: "Certifications",
+          url: "/academy-hub/certifications",
         },
         {
-          title: "Changelog",
+          title: "Instructors",
+          url: "/academy-hub/instructors",
+        },
+        {
+          title: "Schedules",
+          url: "/academy-hub/schedules",
+        },
+      ],
+    },
+    {
+      title: "Feature Hub",
+      url: "/feature-hub/",
+      icon: Bot,
+      items: [
+        {
+          title: "Product Modules",
+          url: "/feature-hub/product-modules",
+        },
+        {
+          title: "Feature Requests",
+          url: "/feature-hub/feature-requests",
+        },
+        {
+          title: "Product Feedbacks",
+          url: "/feature-hub/product-feedbacks",
+        },
+      ],
+    },
+    {
+      title: "Business Operations",
+      url: "/business-operations/",
+      icon: AudioWaveform,
+      items: [
+        {
+          title: "Schedules",
+          url: "/business-operations/schedules",
+        },
+        {
+          title: "Product Impact",
           url: "#",
         },
       ],
@@ -143,17 +157,17 @@ const data = {
   ],
   projects: [
     {
-      name: "Design Engineering",
+      name: "Customer Training",
       url: "#",
       icon: Frame,
     },
     {
-      name: "Sales & Marketing",
+      name: "Product Launch",
       url: "#",
       icon: PieChart,
     },
     {
-      name: "Travel",
+      name: "Team Workshops",
       url: "#",
       icon: Map,
     },
@@ -164,7 +178,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={data.organizations} />
+        <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
