@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Leecho | Product Hub",
   description: "Build trust, improve retention, and drive growth by making education a core part of your product strategy.",
